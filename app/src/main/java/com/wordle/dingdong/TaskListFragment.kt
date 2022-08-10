@@ -43,19 +43,25 @@ class TaskListFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        // TODO: observe the list of forageables from the view model and submit it the adapter
+        // TODO: observe the list of tasks from the view model and submit it the adapter
         viewModel.allTasks.observe(this.viewLifecycleOwner) { tasks ->
-            tasks.let {
-                adapter.submitList(it)
+            if (tasks.isEmpty()) {
+                binding.taskReminderRecyclerView.visibility = View.GONE
+                binding.noReminders.visibility = View.VISIBLE
+            } else {
+                binding.taskReminderRecyclerView.visibility = View.VISIBLE
+                binding.noReminders.visibility = View.GONE
+                tasks.let {
+                    adapter.submitList(it)
+                }
             }
         }
 
         binding.apply {
             taskReminderRecyclerView.adapter = adapter
             newTaskButton.setOnClickListener {
-                findNavController().navigate(
-                    R.id.action_taskListFragment_to_addTaskDialogFragment
-                )
+                val action = TaskListFragmentDirections.actionTaskListFragmentToAddTaskDialogFragment(getString(R.string.add_new_task_title))
+                findNavController().navigate(action)
             }
         }
     }

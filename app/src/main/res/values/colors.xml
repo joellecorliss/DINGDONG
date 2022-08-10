@@ -7,5 +7,9 @@
     <color name="blue_200">#FF90CAF9</color>
     <color name="blue_500">#FF2196F3</color>
     <color name="blue_700">#FF1976D2</color>
+    <color name="keylimepie_200">#FFFFE2</color>
+    <color name="keylimepie_500">#E8E8CC</color>
+    <color name="charcoalpie_200">#5E5E52</color>
+    <color name="charcoalpie_500">#34342A</color>
 
 </resources>

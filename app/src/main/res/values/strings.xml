@@ -7,9 +7,10 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="task_details">Task Details</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="add_new_task_title">Add New Task</string>
+    <string name="edit_task_title">Edit Task</string>
     <string name="add_task_new_menu_button">Save</string>
     <string name="no_reminders">There are currently no reminders. Add a new reminder below.</string>
 </resources>

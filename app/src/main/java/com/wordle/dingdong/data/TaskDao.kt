@@ -24,6 +24,6 @@ interface TaskDao {
     @Query("SELECT * FROM task_database WHERE id = :id")
     fun getTask(id: Long): Flow<Task>
 
-    @Query("SELECT * FROM task_database")
+    @Query("SELECT * FROM task_database ORDER BY task_date")
     fun getTasks(): Flow<List<Task>>
 }

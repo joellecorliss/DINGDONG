@@ -1,22 +1,25 @@
 package com.wordle.dingdong.viewmodel
 
-import android.widget.TextView
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.*
 import com.wordle.dingdong.data.TaskDao
 import com.wordle.dingdong.model.Task
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 /**
- * Shared [ViewModel] to provide data to the [ForageableListFragment], [ForageableDetailFragment],
- * and [AddForageableFragment] and allow for interaction the the [Task]
+ * Shared [ViewModel] to provide data to the [TaskListFragment], [TaskDetailFragment],
+ * and [AddTaskDialogFragment] and allow for interaction the the [Task]
  */
 
 class TaskViewModel(private val taskDao: TaskDao): ViewModel()  {
     val allTasks: LiveData<List<Task>> = taskDao.getTasks().asLiveData()
 
-    // TODO : create method that takes id: Long as a parameter and retrieve a Forageable from the
+    // TODO : create method that takes id: Long as a parameter and retrieve a Task from the
     //  database by id via the DAO.
     fun retrieveTask(id: Long): LiveData<Task> {
         return taskDao.getTask(id).asLiveData()
@@ -25,17 +28,17 @@ class TaskViewModel(private val taskDao: TaskDao): ViewModel()  {
     fun addTask(
         name: String,
         description: String,
-        //date: Date,
+        date: Long,
     ) {
-        val forageable = Task(
+        val task = Task(
             taskTitle = name,
             taskDescription = description,
-            //taskDate = date,
+            taskDate = date,
         )
 
-        // TODO: launch a coroutine and call the DAO method to add a Forageable to the database within it
+        // TODO: launch a coroutine and call the DAO method to add a task to the database within it
         viewModelScope.launch {
-            taskDao.insert(forageable)
+            taskDao.insert(task)
         }
     }
 
@@ -43,24 +46,24 @@ class TaskViewModel(private val taskDao: TaskDao): ViewModel()  {
         id: Long,
         name: String,
         description: String,
-        //date: Date,
+        date: Long,
     ) {
-        val forageable = Task(
+        val task = Task(
             id = id,
             taskTitle = name,
             taskDescription = description,
-            //taskDate = date,
+            taskDate = date,
         )
         viewModelScope.launch(Dispatchers.IO) {
-            // TODO: call the DAO method to update a forageable to the database here
-            taskDao.update(forageable)
+            // TODO: call the DAO method to update a task to the database here
+            taskDao.update(task)
         }
     }
 
-    fun deleteTask(forageable: Task) {
+    fun deleteTask(task: Task) {
         viewModelScope.launch(Dispatchers.IO) {
-            // TODO: call the DAO method to delete a forageable to the database here
-            taskDao.delete(forageable)
+            // TODO: call the DAO method to delete a task to the database here
+            taskDao.delete(task)
         }
     }
 

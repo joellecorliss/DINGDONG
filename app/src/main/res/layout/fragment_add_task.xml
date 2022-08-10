@@ -13,7 +13,7 @@
         android:id="@+id/new_task_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="What's your task?"
+        android:text="What's your task?"
         android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -51,7 +51,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:hint="Leave it blank if not necessary"
         app:layout_constraintStart_toStartOf="@id/new_task_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/new_task_description">
@@ -60,6 +59,7 @@
             android:id="@+id/new_task_description_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:hint="Leave it blank if not necessary"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 

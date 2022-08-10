@@ -51,10 +51,10 @@ class TaskDetailFragment : Fragment() {
         binding.apply {
             taskTitle.text = task.taskTitle
             taskDescription.text = task.taskDescription
-            //taskDatetime.text = task.taskDate.toString()
+            taskDate.text = task.getFullDateString()
 
             editTaskFab.setOnClickListener {
-                val action = TaskDetailFragmentDirections.actionTaskDetailFragmentToAddTaskDialogFragment(task.id)
+                val action = TaskDetailFragmentDirections.actionTaskDetailFragmentToAddTaskDialogFragment(getString(R.string.edit_task_title), task.id)
                 findNavController().navigate(action)
             }
         }
