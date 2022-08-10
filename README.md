@@ -10,10 +10,11 @@ A fuss-free Reminder app built in Kotlin to notify users of their daily tasks.
   <img src="https://user-images.githubusercontent.com/26968011/183894725-30249ebd-1074-4b20-899f-dc6c82e744e5.png" width="328">
 </p>
 
+## 1. Upcoming Features
+- Add notification function to notify upcoming Task in the background
 
-## 1. Upcoming Fixes
+## 2. Upcoming Fixes
 - Get current date when updating Task (currently date is automatically set to 1/1/1970 if no date is selected)
 
-## 2. Upcoming Enhancements
-- Add notification function to notify upcoming Task in the background
+## 3. Upcoming Enhancements
 - Improve UI of TaskDetailFragment
