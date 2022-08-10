@@ -1,5 +1,7 @@
 # DINGDONG
 
+<img src="https://img.shields.io/badge/license-Apache2.0-brightgreen">
+
 A fuss-free Reminder app built in Kotlin to notify users of their daily tasks.
 
 <p float="left" align="center">
