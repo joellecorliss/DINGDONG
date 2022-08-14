@@ -28,7 +28,8 @@ class TaskListFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentTasksBinding.inflate(inflater, container, false)
@@ -43,7 +44,6 @@ class TaskListFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        // TODO: observe the list of tasks from the view model and submit it the adapter
         viewModel.allTasks.observe(this.viewLifecycleOwner) { tasks ->
             if (tasks.isEmpty()) {
                 binding.taskReminderRecyclerView.visibility = View.GONE
@@ -60,7 +60,9 @@ class TaskListFragment : Fragment() {
         binding.apply {
             taskReminderRecyclerView.adapter = adapter
             newTaskButton.setOnClickListener {
-                val action = TaskListFragmentDirections.actionTaskListFragmentToAddTaskDialogFragment(getString(R.string.add_new_task_title))
+                val action = TaskListFragmentDirections.actionTaskListFragmentToAddTaskDialogFragment(
+                    getString(R.string.add_new_task_title)
+                )
                 findNavController().navigate(action)
             }
         }

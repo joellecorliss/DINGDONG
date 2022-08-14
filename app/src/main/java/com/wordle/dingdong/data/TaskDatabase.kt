@@ -4,14 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
 import com.wordle.dingdong.model.Task
 
 /**
  * Room database to persist data for the app.
  * This database stores a [Task] entity
  */
-// TODO: create the database with all necessary annotations, methods, variables, etc.
 @Database(entities = [Task::class], version = 1, exportSchema = false)
 abstract class TaskDatabase : RoomDatabase() {
     abstract fun taskDao(): TaskDao
@@ -25,7 +23,8 @@ abstract class TaskDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     TaskDatabase::class.java,
-                    "task_database").fallbackToDestructiveMigration().build()
+                    "task_database"
+                ).fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 return instance
             }

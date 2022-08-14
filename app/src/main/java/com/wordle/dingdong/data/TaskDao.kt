@@ -1,6 +1,11 @@
 package com.wordle.dingdong.data
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Update
 import com.wordle.dingdong.model.Task
 import kotlinx.coroutines.flow.Flow
 
@@ -10,8 +15,8 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDao {
-    //coroutine
-    //Room does not allow us to execute any database operations on the main thread - it will throw an error if we do
+    // coroutine
+    // Room does not allow us to execute any database operations on the main thread - it will throw an error if we do
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(task: Task)
 

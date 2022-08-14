@@ -28,7 +28,8 @@ class TaskDetailFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentTaskDetailBinding.inflate(inflater, container, false)
@@ -39,8 +40,6 @@ class TaskDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val id = navigationArgs.id
-        // TODO: Observe a task that is retrieved by id, set the task variable,
-        //  and call the bind task method
         viewModel.retrieveTask(id).observe(this.viewLifecycleOwner) { selectedTask ->
             task = selectedTask
             bindTask()
@@ -54,7 +53,9 @@ class TaskDetailFragment : Fragment() {
             taskDate.text = task.getFullDateString()
 
             editTaskFab.setOnClickListener {
-                val action = TaskDetailFragmentDirections.actionTaskDetailFragmentToAddTaskDialogFragment(getString(R.string.edit_task_title), task.id)
+                val action = TaskDetailFragmentDirections.actionTaskDetailFragmentToAddTaskDialogFragment(
+                    getString(R.string.edit_task_title), task.id
+                )
                 findNavController().navigate(action)
             }
         }

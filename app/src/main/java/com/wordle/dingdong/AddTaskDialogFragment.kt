@@ -1,18 +1,15 @@
 package com.wordle.dingdong
 
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
-import androidx.annotation.RequiresApi
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.datepicker.MaterialDatePicker
-
 import com.wordle.dingdong.databinding.FragmentAddTaskBinding
 import com.wordle.dingdong.model.Task
 import com.wordle.dingdong.viewmodel.TaskViewModel
@@ -33,7 +30,8 @@ class AddTaskDialogFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentAddTaskBinding.inflate(inflater, container, false)
@@ -44,8 +42,6 @@ class AddTaskDialogFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val id = navigationArgs.id
         if (id > 0) {
-            // TODO: Observe a task that is retrieved by id, set the task variable,
-            //  and call the bindTask method
             viewModel.retrieveTask(id).observe(this.viewLifecycleOwner) { selectedTask ->
                 task = selectedTask
                 bindTask(task)
@@ -59,7 +55,7 @@ class AddTaskDialogFragment : Fragment() {
             val datePicker = MaterialDatePicker.Builder.datePicker().setTheme(R.style.MaterialCalendarTheme).build()
             binding.pickDateButton.setOnClickListener {
                 datePicker.apply {
-                    show(this@AddTaskDialogFragment.requireActivity().supportFragmentManager,"Date_Picker")
+                    show(this@AddTaskDialogFragment.requireActivity().supportFragmentManager, "Date_Picker")
                     addOnPositiveButtonClickListener {
                         getDate = it
                         binding.selectedDate.text = this.headerText
@@ -111,14 +107,14 @@ class AddTaskDialogFragment : Fragment() {
         val datePicker = MaterialDatePicker.Builder.datePicker().setTheme(R.style.MaterialCalendarTheme).build()
         binding.pickDateButton.setOnClickListener {
             datePicker.apply {
-                show(this@AddTaskDialogFragment.requireActivity().supportFragmentManager,"Date_Picker")
+                show(this@AddTaskDialogFragment.requireActivity().supportFragmentManager, "Date_Picker")
                 addOnPositiveButtonClickListener {
                     getDate = it
                     binding.selectedDate.text = this.headerText
                 }
             }
         }
-        binding.apply{
+        binding.apply {
             newTaskTitleInput.setText(task.taskTitle, TextView.BufferType.SPANNABLE)
             newTaskDescriptionInput.setText(task.taskDescription, TextView.BufferType.SPANNABLE)
             selectedDate.setText(task.getFullDateString(), TextView.BufferType.SPANNABLE)
@@ -126,7 +122,6 @@ class AddTaskDialogFragment : Fragment() {
                 updateTask(getDate)
             }
         }
-
     }
 
     private fun isValidEntry() = viewModel.isValidEntry(
