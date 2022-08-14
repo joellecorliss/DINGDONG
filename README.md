@@ -1,6 +1,6 @@
 # DINGDONG
 
-<img src="https://img.shields.io/badge/license-Apache2.0-brightgreen">
+<a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/license-Apache2.0-brightgreen"></a>
 
 A fuss-free Reminder app built in Kotlin to notify users of their daily tasks.
 
