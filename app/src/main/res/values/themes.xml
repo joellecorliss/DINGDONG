@@ -2,16 +2,19 @@
     <!-- Base application theme. -->
     <style name="Theme.DINGDONG" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/keylimepie_200</item>
-        <item name="colorPrimaryVariant">@color/keylimepie_200</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/jet_200</item>
+        <item name="colorPrimaryVariant">@color/jet_500</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/keylimepie_500</item>
-        <item name="colorSecondaryVariant">@color/keylimepie_500</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/jet_200</item>
+        <item name="colorSecondaryVariant">@color/jet_200</item>
+        <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
     </style>
 
     <!-- MaterialDatePicker theme -->
