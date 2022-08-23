@@ -53,12 +53,13 @@ class AddTaskDialogFragment : Fragment() {
         } else {
             var getDate: Long = 0
             val datePicker = MaterialDatePicker.Builder.datePicker().setTheme(R.style.MaterialCalendarTheme).build()
-            binding.pickDateButton.setOnClickListener {
+            binding.newTaskDateLayout.setEndIconOnClickListener {
                 datePicker.apply {
                     show(this@AddTaskDialogFragment.requireActivity().supportFragmentManager, "Date_Picker")
                     addOnPositiveButtonClickListener {
                         getDate = it
                         binding.selectedDate.text = this.headerText
+                        binding.newTaskDateInput.setText(this.headerText)
                     }
                 }
             }
@@ -105,18 +106,22 @@ class AddTaskDialogFragment : Fragment() {
     private fun bindTask(task: Task) {
         var getDate: Long = 0
         val datePicker = MaterialDatePicker.Builder.datePicker().setTheme(R.style.MaterialCalendarTheme).build()
-        binding.pickDateButton.setOnClickListener {
+
+        binding.newTaskDateLayout.setEndIconOnClickListener {
             datePicker.apply {
                 show(this@AddTaskDialogFragment.requireActivity().supportFragmentManager, "Date_Picker")
                 addOnPositiveButtonClickListener {
                     getDate = it
                     binding.selectedDate.text = this.headerText
+                    binding.newTaskDateInput.setText(this.headerText)
                 }
             }
         }
+
         binding.apply {
             newTaskTitleInput.setText(task.taskTitle, TextView.BufferType.SPANNABLE)
             newTaskDescriptionInput.setText(task.taskDescription, TextView.BufferType.SPANNABLE)
+            newTaskDateInput.setText(task.getFullDateString(), TextView.BufferType.SPANNABLE)
             selectedDate.setText(task.getFullDateString(), TextView.BufferType.SPANNABLE)
             saveBtn.setOnClickListener {
                 updateTask(getDate)
