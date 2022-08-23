@@ -7,12 +7,14 @@
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.1145" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/drawable/ic_baseline_edit_calendar_24.xml" value="0.1" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/drawable/ic_baseline_more_horiz_24.xml" value="0.1145" />
+        <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout-v21/fragment_add_task.xml" value="0.20516304347826086" />
+        <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout-v21/fragment_tasks.xml" value="0.25" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout/fragment_add_task.xml" value="0.2" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout/fragment_edit_task.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout/fragment_task_detail.xml" value="0.25" />
-        <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout/fragment_tasks.xml" value="0.264" />
+        <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout/fragment_tasks.xml" value="0.1" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/layout/task_item.xml" value="0.264" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/menu/menu_add_task.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/jo-ch/AndroidStudioProjects/DINGDONG/app/src/main/res/menu/menu_main.xml" value="0.1765625" />

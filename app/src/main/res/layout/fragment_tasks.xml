@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginBottom="20dp"
             android:text="Hello!"
             android:textSize="24sp" />
@@ -30,7 +30,7 @@
             android:id="@+id/header2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:text="All tasks"
             android:textSize="24sp"
             android:textStyle="bold"
