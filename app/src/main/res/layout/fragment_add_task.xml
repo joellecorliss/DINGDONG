@@ -27,6 +27,7 @@
             android:id="@+id/new_task_title_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:maxLength="25"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -47,6 +48,7 @@
             android:id="@+id/new_task_description_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:maxLength="50"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
