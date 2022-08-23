@@ -9,24 +9,19 @@
     android:layout_margin="16dp"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/new_task_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="What's your task?"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/new_task_title_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toStartOf="@id/new_task_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/new_task_title">
+        android:hint="What's your task?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:helperTextEnabled="true"
+        app:helperText="Max. 25 characters"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/new_task_title_input"
@@ -35,31 +30,23 @@
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/new_task_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Description"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/new_task_title_layout"/>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/new_task_description_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toStartOf="@id/new_task_title"
+        android:layout_marginTop="25dp"
+        android:hint="Details"
+        app:layout_constraintStart_toStartOf="@id/new_task_title_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/new_task_description">
+        app:layout_constraintTop_toBottomOf="@id/new_task_title_layout"
+        app:helperTextEnabled="true"
+        app:helperText="Optional"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/new_task_description_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Leave it blank if not necessary"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,7 +56,6 @@
         android:layout_height="wrap_content"
         android:text="Remind me on"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/new_task_description_layout"/>
 
@@ -79,7 +65,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
         android:text="Select Date"
         app:icon="@drawable/ic_baseline_edit_calendar_24"
         app:layout_constraintStart_toStartOf="parent"
