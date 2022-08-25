@@ -58,7 +58,6 @@ class AddTaskDialogFragment : Fragment() {
                     show(this@AddTaskDialogFragment.requireActivity().supportFragmentManager, "Date_Picker")
                     addOnPositiveButtonClickListener {
                         getDate = it
-                        binding.selectedDate.text = this.headerText
                         binding.newTaskDateInput.setText(this.headerText)
                     }
                 }
@@ -112,7 +111,6 @@ class AddTaskDialogFragment : Fragment() {
                 show(this@AddTaskDialogFragment.requireActivity().supportFragmentManager, "Date_Picker")
                 addOnPositiveButtonClickListener {
                     getDate = it
-                    binding.selectedDate.text = this.headerText
                     binding.newTaskDateInput.setText(this.headerText)
                 }
             }
@@ -122,9 +120,12 @@ class AddTaskDialogFragment : Fragment() {
             newTaskTitleInput.setText(task.taskTitle, TextView.BufferType.SPANNABLE)
             newTaskDescriptionInput.setText(task.taskDescription, TextView.BufferType.SPANNABLE)
             newTaskDateInput.setText(task.getFullDateString(), TextView.BufferType.SPANNABLE)
-            selectedDate.setText(task.getFullDateString(), TextView.BufferType.SPANNABLE)
             saveBtn.setOnClickListener {
-                updateTask(getDate)
+                if (getDate > 0) {
+                    updateTask(getDate)
+                } else {
+                    updateTask(task.taskDate)
+                }
             }
         }
     }
