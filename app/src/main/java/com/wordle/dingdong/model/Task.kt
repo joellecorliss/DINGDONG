@@ -30,7 +30,7 @@ data class Task(
     }
 
     fun getFullDateString(): String {
-        val format = SimpleDateFormat("dd/MM/yyyy", Locale.US)
+        val format = SimpleDateFormat("MMM dd, yyyy", Locale.US)
         return format.format(Date(taskDate))
     }
 }
