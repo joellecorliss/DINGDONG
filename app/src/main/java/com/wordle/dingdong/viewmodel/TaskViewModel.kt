@@ -34,7 +34,7 @@ class TaskViewModel(private val taskDao: TaskDao) : ViewModel() {
             taskDate = date,
         )
 
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             taskDao.insert(task)
         }
     }
