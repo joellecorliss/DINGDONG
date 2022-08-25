@@ -1,4 +1,4 @@
-package com.wordle.dingdong
+package com.dingdong.dingdong
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.wordle.dingdong.data
+package com.dingdong.dingdong.data
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.wordle.dingdong.model.Task
+import com.dingdong.dingdong.model.Task
 import kotlinx.coroutines.flow.Flow
 
 /**

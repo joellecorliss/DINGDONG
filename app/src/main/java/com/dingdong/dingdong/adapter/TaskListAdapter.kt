@@ -1,12 +1,12 @@
-package com.wordle.dingdong.adapter
+package com.dingdong.dingdong.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.wordle.dingdong.databinding.TaskItemBinding
-import com.wordle.dingdong.model.Task
+import com.dingdong.dingdong.databinding.TaskItemBinding
+import com.dingdong.dingdong.model.Task
 
 /**
  * ListAdapter for the list of [Task]s retrieved from the database

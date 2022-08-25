@@ -1,12 +1,12 @@
-package com.wordle.dingdong.viewmodel
+package com.dingdong.dingdong.viewmodel
 
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.wordle.dingdong.data.TaskDao
-import com.wordle.dingdong.model.Task
+import com.dingdong.dingdong.data.TaskDao
+import com.dingdong.dingdong.model.Task
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

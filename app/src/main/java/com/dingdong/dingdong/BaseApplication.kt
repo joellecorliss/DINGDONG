@@ -1,7 +1,7 @@
-package com.wordle.dingdong
+package com.dingdong.dingdong
 
 import android.app.Application
-import com.wordle.dingdong.data.TaskDatabase
+import com.dingdong.dingdong.data.TaskDatabase
 
 class BaseApplication : Application() {
     val database: TaskDatabase by lazy { TaskDatabase.getDatabase(this) }

@@ -6,7 +6,7 @@
     app:startDestination="@id/taskListFragment">
     <fragment
         android:id="@+id/taskListFragment"
-        android:name="com.wordle.dingdong.TaskListFragment"
+        android:name="com.dingdong.dingdong.TaskListFragment"
         android:label="@string/app_name">
         <action
             android:id="@+id/action_taskListFragment_to_taskDetailFragment"
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/taskDetailFragment"
-        android:name="com.wordle.dingdong.TaskDetailFragment"
+        android:name="com.dingdong.dingdong.TaskDetailFragment"
         android:label="@string/task_details"
         tools:layout="@layout/fragment_task_detail">
         <argument
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/addTaskDialogFragment"
-        android:name="com.wordle.dingdong.AddTaskDialogFragment"
+        android:name="com.dingdong.dingdong.AddTaskDialogFragment"
         android:label="{title}"
         tools:layout="@layout/fragment_add_task">
         <action

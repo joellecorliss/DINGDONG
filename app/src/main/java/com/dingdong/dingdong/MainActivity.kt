@@ -1,4 +1,4 @@
-package com.wordle.dingdong
+package com.dingdong.dingdong
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.wordle.dingdong.databinding.ActivityMainBinding
+import com.dingdong.dingdong.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

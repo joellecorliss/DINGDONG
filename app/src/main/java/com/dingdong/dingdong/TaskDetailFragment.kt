@@ -1,4 +1,4 @@
-package com.wordle.dingdong
+package com.dingdong.dingdong
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,10 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.wordle.dingdong.databinding.FragmentTaskDetailBinding
-import com.wordle.dingdong.model.Task
-import com.wordle.dingdong.viewmodel.TaskViewModel
-import com.wordle.dingdong.viewmodel.TaskViewModelFactory
+import com.dingdong.dingdong.databinding.FragmentTaskDetailBinding
+import com.dingdong.dingdong.model.Task
+import com.dingdong.dingdong.viewmodel.TaskViewModel
+import com.dingdong.dingdong.viewmodel.TaskViewModelFactory
 
 class TaskDetailFragment : Fragment() {
     private val navigationArgs: TaskDetailFragmentArgs by navArgs()

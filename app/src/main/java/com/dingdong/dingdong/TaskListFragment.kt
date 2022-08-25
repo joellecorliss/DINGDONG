@@ -1,4 +1,4 @@
-package com.wordle.dingdong
+package com.dingdong.dingdong
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.wordle.dingdong.adapter.TaskListAdapter
-import com.wordle.dingdong.databinding.FragmentTasksBinding
-import com.wordle.dingdong.viewmodel.TaskViewModel
-import com.wordle.dingdong.viewmodel.TaskViewModelFactory
+import com.dingdong.dingdong.adapter.TaskListAdapter
+import com.dingdong.dingdong.databinding.FragmentTasksBinding
+import com.dingdong.dingdong.viewmodel.TaskViewModel
+import com.dingdong.dingdong.viewmodel.TaskViewModelFactory
 
 /**
  * A fragment to view the list of [Task]s stored in the database.

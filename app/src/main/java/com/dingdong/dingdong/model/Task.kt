@@ -1,4 +1,4 @@
-package com.wordle.dingdong.model
+package com.dingdong.dingdong.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
