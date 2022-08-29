@@ -8,7 +8,7 @@
     android:layout_margin="10dp"
     android:padding="16dp"
     android:clipToPadding="false"
-    tools:context=".">
+    tools:context=".TaskDetailFragment">
 
     <ImageView
         android:id="@+id/task_title_icon"
